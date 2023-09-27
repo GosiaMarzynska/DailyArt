@@ -1,0 +1,27 @@
+.welcome-card{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.title{
+    font-weight: 400;
+    font-size: 2.3rem;
+}
+.title-text{
+    font-weight: 200;
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+
+}
+
+.drawBtn{
+    background-color: rgb(84, 138, 192);
+    padding: 3rem;
+    border: none;
+    box-shadow: 4px 4px 4px rgb(117, 117, 117);
+
+}
+
