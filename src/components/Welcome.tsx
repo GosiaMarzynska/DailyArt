@@ -1,12 +1,17 @@
-import './Welcome.css'
+import './Welcome.css';
+import React from 'react';
 
-export default function Welcome(){
+const Welcome: React.FC<{ clickHandler: () => void, isLoading: boolean }> = props => {
+	return (
+		<div className='welcome-card'>
+			<h1 className='title'>Daily Art</h1>
+			<p className='title-text'>Draw art for today!</p>
+			<button onClick={props.clickHandler} className='drawBtn'>
+				draw
+			</button>
+            {props.isLoading && <p className='loading'>loading...</p>}
+		</div>
+	);
+};
 
-    return(
-        <div className='welcome-card'>
-            <h1 className='title'>Daily Art</h1>
-            <p className='title-text'>Draw art for today!</p>
-            <button className='drawBtn'>draw</button>
-        </div>
-    )
-}
+export default Welcome;

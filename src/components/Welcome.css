@@ -1,27 +1,74 @@
-.welcome-card{
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
+.welcome-card {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: block;
+	text-align: center;
 }
 
-.title{
-    font-weight: 400;
-    font-size: 2.3rem;
+.title {
+	padding-top: 7rem;
+	font-weight: 400;
+	font-size: 2.3rem;
 }
-.title-text{
-    font-weight: 200;
-    font-size: 1.8rem;
-
-    margin-bottom: 2rem;
-
-}
-
-.drawBtn{
-    background-color: rgb(84, 138, 192);
-    padding: 3rem;
-    border: none;
-    box-shadow: 4px 4px 4px rgb(117, 117, 117);
-
+.welcome-card::before,
+.welcome-card::after {
+	content: '';
+	position: absolute;
+	width: 20%;
+	height: 10%;
 }
 
+.welcome-card::before {
+	top: 20px;
+	left: 20px;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+}
+
+.welcome-card::after {
+	right: 20px;
+	bottom: 20px;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+}
+
+.title-text {
+	font-weight: 200;
+	font-size: 1.8rem;
+	margin-top: 6rem;
+	margin-bottom: 3rem;
+}
+
+.drawBtn {
+	background-color: rgb(84, 138, 192);
+	height: 100px;
+	width: 100px;
+	font-size: 1.2rem;
+	font-weight: 200;
+	border: none;
+	box-shadow: 5px 5px rgb(37, 37, 37);
+	transition: all 0.4s;
+}
+
+.drawBtn:hover {
+	box-shadow: 0 0 rgb(0, 0, 0);
+}
+
+.loading {
+	padding-top: 4rem;
+	font-weight: 200;
+	animation: opacity 1s ease-in-out infinite;
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
