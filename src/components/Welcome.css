@@ -7,7 +7,7 @@
 }
 
 .title {
-	padding-top: 7rem;
+	padding-top: 25vh;
 	font-weight: 400;
 	font-size: 2.3rem;
 }
@@ -20,15 +20,15 @@
 }
 
 .welcome-card::before {
-	top: 20px;
-	left: 20px;
+	top: 2rem;
+	left: 2rem;
 	border-top: 2px solid #000;
 	border-left: 2px solid #000;
 }
 
 .welcome-card::after {
-	right: 20px;
-	bottom: 20px;
+	right: 2rem;
+	bottom: 2rem;
 	border-bottom: 2px solid #000;
 	border-right: 2px solid #000;
 }
@@ -42,10 +42,10 @@
 
 .drawBtn {
 	background-color: rgb(84, 138, 192);
+	font-family: 'Open Sans', sans-serif;;
 	height: 100px;
 	width: 100px;
-	font-size: 1.2rem;
-	font-weight: 200;
+	font-size: 1.2rem;	
 	border: none;
 	box-shadow: 5px 5px rgb(37, 37, 37);
 	transition: all 0.4s;
@@ -58,7 +58,7 @@
 .loading {
 	padding-top: 4rem;
 	font-weight: 200;
-	animation: opacity 1s ease-in-out infinite;
+	animation: opacity 1.4s ease-in-out infinite;
 }
 
 @keyframes opacity {
@@ -71,4 +71,44 @@
 	100% {
 		opacity: 1;
 	}
+}
+
+
+@media (min-width: 992px) {
+	.title {	
+		font-size: 3rem;
+	}
+	.welcome-card::before,
+	.welcome-card::after {
+		content: '';
+		position: absolute;
+		width: 25%;
+		height: 15%;
+	}
+	
+	.welcome-card::before {
+		top: 4rem;
+		left: 4rem;	
+	}
+	
+	.welcome-card::after {
+		right: 4rem;
+		bottom: 4rem;	
+	}
+	
+	.title-text {		
+		font-size: 2.3rem;
+	}
+	
+	
+	.drawBtn {	
+		height: 150px;
+		width: 150px;
+		font-size: 1.8rem;		
+	}
+
+	.loading {
+		font-size: 1.5rem;
+	}
+	
 }
