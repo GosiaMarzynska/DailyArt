@@ -1,14 +1,14 @@
 import './ArtInfo.css';
-
+	
 const ArtInfo: React.FC<{
 	data: {
-		imgSrc: string;
-		imgAlt: string;
-		author: string;
-		title: string;
-		type: string;
-		date: number;
-		origin: string;
+		imgSrc?: string;
+		imgAlt?: string;
+		author?: string;
+		title?: string;
+		type?: string;
+		date?: number;
+		origin?: string;
 	},
  returnHandler: () => void}> = props => {
 	const { imgSrc, imgAlt, author, title, type, date, origin } = props.data;
