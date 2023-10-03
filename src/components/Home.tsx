@@ -26,7 +26,6 @@ export default function Home() {
 				throw new Error(`Error! status: ${response.status}`);
 			}
 			const data = await response.json();
-			console.log(data)
 			const dataInfo = data.data[Math.floor(Math.random() * 100)];
 			setArtData({
 				imgSrc: data.config['iiif_url'] + '/' + dataInfo['image_id'] + '/full/843,/0/default.jpg',
