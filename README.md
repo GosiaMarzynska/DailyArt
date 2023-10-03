@@ -2,7 +2,7 @@
 
 
 ## Try me
-#### [daily-art.netlify.app](daily-art.netlify.app)
+#### [daily-art.netlify.app](https://daily-art.netlify.app/)
 
 ## About
 It's a website app, where every day you can draw an art from Art Institute of Chicago API. When it's drawn the image and a short description is shown. App provides a 1000 records.
