@@ -18,14 +18,15 @@ export default function Home() {
 
 	const clickHandler = async () => {
 		setIsLoading(true);
-
+		const page = Math.floor(Math.random() * (100-1) + 1);
 		try {
-			const response = await fetch('https://api.artic.edu/api/v1/artworks?limit=100');
+			const response = await fetch('https://api.artic.edu/api/v1/artworks?limit=100&page='+page);
 
 			if (!response.ok!) {
 				throw new Error(`Error! status: ${response.status}`);
 			}
 			const data = await response.json();
+			console.log(data)
 			const dataInfo = data.data[Math.floor(Math.random() * 100)];
 			setArtData({
 				imgSrc: data.config['iiif_url'] + '/' + dataInfo['image_id'] + '/full/843,/0/default.jpg',

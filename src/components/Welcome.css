@@ -76,6 +76,7 @@
 
 @media (min-width: 992px) {
 	.title {	
+		padding-top: 18vh;
 		font-size: 3rem;
 	}
 	.welcome-card::before,
